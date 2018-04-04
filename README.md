@@ -1,6 +1,13 @@
-# Searchtwitter
+# Api Github
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8.
+
+Using the GitHub API, create a small application that shows a list of your public repositories.
+
+##Compilation
+
+Run `npm install` in the folder app.
 
 ## Development server
 
