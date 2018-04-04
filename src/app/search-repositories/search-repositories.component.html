@@ -1,0 +1,29 @@
+<mat-card>
+  <div class="example-container"> 
+      <mat-form-field>
+        <input matInput [(ngModel)]="username" (ngModelChange)="isValid($event)" placeholder="Username github" required #uname="ngModel">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+
+      <div *ngIf="uname.invalid"> 
+          <strong>Username required.</strong>
+      </div> 
+
+      <span style="text-align:end;">
+          <button [disabled]="uname.invalid" (click)="search()" mat-raised-button color="primary" mat-button>Search repositories</button>
+      </span>
+
+      <div *ngIf="status"> 
+          <strong>Count: </strong> {{countRepositories}}
+      </div> 
+  </div>
+</mat-card>
+
+<div *ngIf="status">
+  <mat-card *ngFor="let repository of repositories"  style="margin-top:5px;">
+      <strong>Name: </strong> {{repository.name}} <br>
+      <strong>Description: </strong> {{repository.description}} <br>
+      <strong>Url: </strong> <a href="{{repository.html_url}}" target="blank">{{repository.name}}</a>
+  </mat-card>
+</div>
+
