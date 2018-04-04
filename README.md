@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Using the GitHub API, create a small application that shows a list of your public repositories.
 
-##Compilation
+## Compilation
 
 Run `npm install` in the folder app.
 
